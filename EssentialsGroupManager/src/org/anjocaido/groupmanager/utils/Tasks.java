@@ -31,7 +31,7 @@ public abstract class Tasks {
 	/**
 	 * Gets the exception stack trace as a string.
 	 * 
-	 * @param exception
+	 * @param exception exception
 	 * @return stack trace as a string
 	 */
 	public static String getStackTraceAsString(Exception exception) {
@@ -69,8 +69,10 @@ public abstract class Tasks {
 	/**
 	 * Appends a string to a file
 	 * 
-	 * @param data
-	 * @param file
+	 * @param data data
+	 * @param file file path
+	 *
+	 * @throws IOException if file cannot be written
 	 */
 	public static void appendStringToFile(String data, String file) throws IOException {
 

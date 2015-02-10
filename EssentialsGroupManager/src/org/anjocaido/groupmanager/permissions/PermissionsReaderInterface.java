@@ -23,148 +23,148 @@ public abstract class PermissionsReaderInterface {
 
 	/**
 	 * 
-	 * @param player
-	 * @param string
+	 * @param player player
+	 * @param string permission
 	 * @return true if has permission
 	 */
 	public abstract boolean has(Player player, String string);
 
 	/**
 	 * 
-	 * @param player
-	 * @param string
+	 * @param player player
+	 * @param string permission
 	 * @return true if has permission
 	 */
 	public abstract boolean permission(Player player, String string);
 
 	/**
 	 * 
-	 * @param userName
+	 * @param userName username
 	 * @return group name for this player.
 	 */
 	public abstract String getGroup(String userName);
 
 	/**
 	 * 
-	 * @param userName
-	 * @param groupName
+	 * @param userName username
+	 * @param groupName group name
 	 * @return true if in group
 	 */
 	public abstract boolean inGroup(String userName, String groupName);
 
 	/**
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return String of prefix
 	 */
 	public abstract String getGroupPrefix(String groupName);
 
 	/**
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return String of suffix
 	 */
 	public abstract String getGroupSuffix(String groupName);
 
 	/**
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return true if can build
 	 */
 	public abstract boolean canGroupBuild(String groupName);
 
 	/**
 	 * 
-	 * @param groupName
-	 * @param node
+	 * @param groupName group name
+	 * @param node permission
 	 * @return String value
 	 */
 	public abstract String getGroupPermissionString(String groupName, String node);
 
 	/**
 	 * 
-	 * @param groupName
-	 * @param node
+	 * @param groupName group name
+	 * @param node permission
 	 * @return integer value
 	 */
 	public abstract int getGroupPermissionInteger(String groupName, String node);
 
 	/**
 	 * 
-	 * @param groupName
-	 * @param node
+	 * @param groupName group name
+	 * @param node permission
 	 * @return boolean value
 	 */
 	public abstract boolean getGroupPermissionBoolean(String groupName, String node);
 
 	/**
 	 * 
-	 * @param groupName
-	 * @param node
+	 * @param groupName group name
+	 * @param node permission
 	 * @return double value
 	 */
 	public abstract double getGroupPermissionDouble(String groupName, String node);
 
 	/**
 	 * 
-	 * @param userName
-	 * @param node
+	 * @param userName username
+	 * @param node permission
 	 * @return String value
 	 */
 	public abstract String getUserPermissionString(String userName, String node);
 
 	/**
 	 * 
-	 * @param userName
-	 * @param node
+	 * @param userName username
+	 * @param node permission
 	 * @return integer value
 	 */
 	public abstract int getUserPermissionInteger(String userName, String node);
 
 	/**
 	 * 
-	 * @param userName
-	 * @param node
+	 * @param userName username
+	 * @param node permission
 	 * @return boolean value
 	 */
 	public abstract boolean getUserPermissionBoolean(String userName, String node);
 
 	/**
 	 * 
-	 * @param userName
-	 * @param node
+	 * @param userName username
+	 * @param node permission
 	 * @return double value
 	 */
 	public abstract double getUserPermissionDouble(String userName, String node);
 
 	/**
 	 * 
-	 * @param userName
-	 * @param node
+	 * @param userName username
+	 * @param node permission
 	 * @return String value
 	 */
 	public abstract String getPermissionString(String userName, String node);
 
 	/**
 	 * 
-	 * @param userName
-	 * @param node
+	 * @param userName username
+	 * @param node permission
 	 * @return integer value
 	 */
 	public abstract int getPermissionInteger(String userName, String node);
 
 	/**
 	 * 
-	 * @param userName
-	 * @param node
+	 * @param userName username
+	 * @param node permission
 	 * @return boolean value
 	 */
 	public abstract boolean getPermissionBoolean(String userName, String node);
 
 	/**
 	 * 
-	 * @param userName
-	 * @param node
+	 * @param userName username
+	 * @param node permission
 	 * @return double value
 	 */
 	public abstract double getPermissionDouble(String userName, String node);
@@ -223,9 +223,9 @@ public abstract class PermissionsReaderInterface {
 	/**
 	 * Gets a double from the Info node without inheritance.
 	 * 
-	 * @param entryName
-	 * @param path
-	 * @param isGroup
+	 * @param entryName entry name
+	 * @param path path
+	 * @param isGroup true if is group
 	 * @return -1 if not found
 	 */
 	public abstract double getInfoDouble(String entryName, String path, boolean isGroup);

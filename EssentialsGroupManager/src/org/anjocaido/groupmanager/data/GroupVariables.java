@@ -49,7 +49,8 @@ public class GroupVariables extends Variables implements Cloneable {
 
 	/**
 	 * A clone of all vars here.
-	 * 
+	 *
+	 * @param newOwner group to clone into
 	 * @return GroupVariables clone
 	 */
 	protected GroupVariables clone(Group newOwner) {
@@ -67,7 +68,7 @@ public class GroupVariables extends Variables implements Cloneable {
 	/**
 	 * Remove a var from the list
 	 * 
-	 * @param name
+	 * @param name variable name
 	 */
 	@Override
 	public void removeVar(String name) {

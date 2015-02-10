@@ -66,7 +66,7 @@ public class WorldDataHolder {
 	/**
 	 * Prevent direct instantiation
 	 * 
-	 * @param worldName
+	 * @param worldName world name
 	 */
 	public WorldDataHolder(String worldName) {
 
@@ -76,9 +76,9 @@ public class WorldDataHolder {
 	/**
 	 * The main constructor for a new WorldDataHolder
 	 * 
-	 * @param worldName
-	 * @param groups
-	 * @param users
+	 * @param worldName world name
+	 * @param groups groups data holder
+	 * @param users users data holder
 	 */
 	public WorldDataHolder(String worldName, GroupsDataHolder groups, UsersDataHolder users) {
 
@@ -220,7 +220,7 @@ public class WorldDataHolder {
 
 	/**
 	 * 
-	 * @param userId
+	 * @param userId user ID
 	 * @return true if we have data for this player.
 	 */
 	public boolean isUserDeclared(String userId) {
@@ -286,7 +286,7 @@ public class WorldDataHolder {
 	/**
 	 * Add a group to the list
 	 * 
-	 * @param groupToAdd
+	 * @param groupToAdd group to add
 	 */
 	public void addGroup(Group groupToAdd) {
 
@@ -309,7 +309,7 @@ public class WorldDataHolder {
 	/**
 	 * Remove the group from the list
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return true if had something to remove. false the group was default or
 	 *         non-existant
 	 */
@@ -506,12 +506,13 @@ public class WorldDataHolder {
 	/**
 	 * Returns a NEW data holder containing data read from the files
 	 * 
-	 * @param worldName
-	 * @param groupsFile
-	 * @param usersFile
+	 * @param worldName world name
+	 * @param groupsFile groups file
+	 * @param usersFile users file
+	 * @return world data
 	 * 
-	 * @throws FileNotFoundException
-	 * @throws IOException
+	 * @throws FileNotFoundException if a file doesn't exist
+	 * @throws IOException if a file can't be read
 	 */
 	public static WorldDataHolder load(String worldName, File groupsFile, File usersFile) throws FileNotFoundException, IOException {
 
@@ -530,11 +531,11 @@ public class WorldDataHolder {
 	/**
 	 * Updates the WorldDataHolder from the Groups file
 	 * 
-	 * @param ph
-	 * @param groupsFile
+	 * @param ph world data holder
+	 * @param groupsFile groups file
 	 * 
-	 * @throws FileNotFoundException
-	 * @throws IOException
+	 * @throws FileNotFoundException if groups file not found
+	 * @throws IOException if groups file can't be read
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	protected static void loadGroups(WorldDataHolder ph, File groupsFile) throws FileNotFoundException, IOException {
@@ -794,11 +795,11 @@ public class WorldDataHolder {
 	/**
 	 * Updates the WorldDataHolder from the Users file
 	 * 
-	 * @param ph
-	 * @param usersFile
+	 * @param ph world data holder
+	 * @param usersFile users file
 	 * 
-	 * @throws FileNotFoundException
-	 * @throws IOException
+	 * @throws FileNotFoundException if users file not found
+	 * @throws IOException if users file can't be read
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	protected static void loadUsers(WorldDataHolder ph, File usersFile) throws FileNotFoundException, IOException {
@@ -1015,8 +1016,8 @@ public class WorldDataHolder {
 	/**
 	 * Write a dataHolder in a specified file
 	 * 
-	 * @param ph
-	 * @param groupsFile
+	 * @param ph wolrd data holder
+	 * @param groupsFile groups file
 	 */
 	public static void writeGroups(WorldDataHolder ph, File groupsFile) {
 
@@ -1096,8 +1097,8 @@ public class WorldDataHolder {
 	/**
 	 * Write a dataHolder in a specified file
 	 * 
-	 * @param ph
-	 * @param usersFile
+	 * @param ph world data holder
+	 * @param usersFile users file
 	 */
 	public static void writeUsers(WorldDataHolder ph, File usersFile) {
 

@@ -38,7 +38,7 @@ public abstract class DataUnit {
 	/**
 	 * Every group is matched only by their names and DataSources names.
 	 * 
-	 * @param o
+	 * @param o object
 	 * @return true if they are equal. false if not.
 	 */
 	@Override
@@ -75,7 +75,7 @@ public abstract class DataUnit {
 	/**
 	 * Set the data source to point to a different worldDataHolder
 	 * 
-	 * @param source
+	 * @param source world data holder
 	 */
 	public void setDataSource(WorldDataHolder source) {
 

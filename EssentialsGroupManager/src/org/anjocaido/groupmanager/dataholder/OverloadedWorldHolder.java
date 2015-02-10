@@ -24,7 +24,7 @@ public class OverloadedWorldHolder extends WorldDataHolder {
 
 	/**
 	 * 
-	 * @param ph
+	 * @param ph world data holder
 	 */
 	public OverloadedWorldHolder(WorldDataHolder ph) {
 
@@ -37,7 +37,7 @@ public class OverloadedWorldHolder extends WorldDataHolder {
 
 	/**
 	 * 
-	 * @param userName
+	 * @param userName username
 	 * @return user object or a new user if none exists.
 	 */
 	@Override
@@ -55,7 +55,7 @@ public class OverloadedWorldHolder extends WorldDataHolder {
 
 	/**
 	 * 
-	 * @param theUser
+	 * @param theUser the user
 	 */
 	@Override
 	public void addUser(User theUser) {
@@ -83,7 +83,7 @@ public class OverloadedWorldHolder extends WorldDataHolder {
 
 	/**
 	 * 
-	 * @param userId
+	 * @param userId user ID
 	 * @return true if removed/false if not found.
 	 */
 	@Override
@@ -164,7 +164,7 @@ public class OverloadedWorldHolder extends WorldDataHolder {
 
 	/**
 	 * 
-	 * @param userId
+	 * @param userId user ID
 	 * @return true if user is overloaded.
 	 */
 	public boolean isOverloaded(String userId) {
@@ -174,7 +174,7 @@ public class OverloadedWorldHolder extends WorldDataHolder {
 
 	/**
 	 * 
-	 * @param userId
+	 * @param userId user ID
 	 */
 	public void overloadUser(String userId) {
 
@@ -190,7 +190,7 @@ public class OverloadedWorldHolder extends WorldDataHolder {
 
 	/**
 	 * 
-	 * @param userId
+	 * @param userId user ID
 	 */
 	public void removeOverload(String userId) {
 
@@ -203,7 +203,7 @@ public class OverloadedWorldHolder extends WorldDataHolder {
 	 * It doesn't affect permissions. But it enables plugins change the
 	 * actual user permissions even in overload mode.
 	 * 
-	 * @param userId
+	 * @param userId user ID
 	 * @return user object
 	 */
 	public User surpassOverload(String userId) {

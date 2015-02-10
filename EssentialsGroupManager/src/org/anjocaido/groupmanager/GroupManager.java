@@ -373,9 +373,9 @@ public class GroupManager extends JavaPlugin {
 	/**
 	 * Called when a command registered by this plugin is received.
 	 * 
-	 * @param sender
-	 * @param cmd
-	 * @param args
+	 * @param sender command sender
+	 * @param cmd command
+	 * @param args arguments
 	 */
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
@@ -2163,8 +2163,8 @@ public class GroupManager extends JavaPlugin {
 	 * 
 	 * groupmanager.notify.self groupmanager.notify.other
 	 * 
-	 * @param name
-	 * @param msg
+	 * @param name name
+	 * @param msg message
 	 */
 	public static void notify(String name, String msg) {
 

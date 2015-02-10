@@ -35,8 +35,8 @@ public class User extends DataUnit implements Cloneable {
 	private transient Player bukkitPlayer = null;
 
 	/**
-	 * 
-	 * @param name
+	 * @param source world data holder
+	 * @param name username
 	 */
 	public User(WorldDataHolder source, String name) {
 
@@ -68,7 +68,7 @@ public class User extends DataUnit implements Cloneable {
 	/**
 	 * Use this to deliver a user from one WorldDataHolder to another
 	 * 
-	 * @param dataSource
+	 * @param dataSource world data holder
 	 * @return null if given dataSource already contains the same user
 	 */
 	public User clone(WorldDataHolder dataSource) {
@@ -289,7 +289,7 @@ public class User extends DataUnit implements Cloneable {
 
 	/**
 	 * 
-	 * @param varList
+	 * @param varList variable list
 	 */
 	public void setVariables(Map<String, Object> varList) {
 

@@ -37,7 +37,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * It needs a WorldDataHolder to work with.
 	 * 
-	 * @param holder
+	 * @param holder world data holder
 	 */
 	public AnjoPermissionsHandler(WorldDataHolder holder) {
 
@@ -47,8 +47,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * A short name method, for permission method.
 	 * 
-	 * @param player
-	 * @param permission
+	 * @param player player
+	 * @param permission permission
 	 * @return true if the player has the permission
 	 */
 	@Override
@@ -60,8 +60,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Checks if a player can use that permission node.
 	 * 
-	 * @param player
-	 * @param permission
+	 * @param player player
+	 * @param permission permission
 	 * @return true if the player has the permission
 	 */
 	@Override
@@ -73,8 +73,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Checks if a player can use that permission node.
 	 * 
-	 * @param playerName
-	 * @param permission
+	 * @param playerName player name
+	 * @param permission permission
 	 * @return true if the player has the permission
 	 */
 	public boolean permission(String playerName, String permission) {
@@ -85,7 +85,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Returns the name of the group of that player name.
 	 * 
-	 * @param userName
+	 * @param userName user name
 	 * @return String of players group name.
 	 */
 	@Override
@@ -98,8 +98,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Returns All permissions (including inheritance and sub groups) for the
 	 * player, including child nodes from Bukkit.
 	 * 
-	 * @param userName
-	 * @return List<String> of all players permissions.
+	 * @param userName user name
+	 * @return list of all players permissions.
 	 */
 	@Override
 	public List<String> getAllPlayersPermissions(String userName) {
@@ -115,8 +115,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Returns All permissions (including inheritance and sub groups) for the
 	 * player. With or without Bukkit child nodes.
 	 * 
-	 * @param userName
-	 * @return Set<String> of all players permissions.
+	 * @param userName username
+	 * @return set of all players permissions.
 	 */
 	@Override
 	public Set<String> getAllPlayersPermissions(String userName, Boolean includeChildren) {
@@ -293,7 +293,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Verify if player is in such group. It will check it's groups inheritance.
 	 * 
-	 * So if you have a group Admin > Moderator
+	 * So if you have a group Admin &gt; Moderator
 	 * 
 	 * And verify the player 'MyAdmin', which is Admin, it will return true for
 	 * both Admin or Moderator groups.
@@ -301,8 +301,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * If you have a player 'MyModerator', which is Moderator, it will give
 	 * false if you pass Admin in group parameter.
 	 * 
-	 * @param name
-	 * @param group
+	 * @param name player name
+	 * @param group group
 	 * @return true if in group (with inheritance)
 	 */
 	@Override
@@ -325,8 +325,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * one of the user's ancestors. Returns an empty string if user has no
 	 * parent groups.
 	 * 
-	 * @param user
-	 *            Player's name
+	 * @param user Player's name
 	 * @return Player's prefix
 	 */
 	@Override
@@ -346,8 +345,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * one of the user's ancestors. Returns an empty string if user has no
 	 * parent groups.
 	 * 
-	 * @param user
-	 *            Player's name
+	 * @param user Player's name
 	 * @return Player's prefix
 	 */
 	@Override
@@ -367,8 +365,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * default group if user has no parent groups, or "Default" if there is no
 	 * default group for that world.
 	 * 
-	 * @param user
-	 *            Player's name
+	 * @param user Player's name
 	 * @return Name of player's primary group
 	 */
 	public String getPrimaryGroup(String user) {
@@ -380,8 +377,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Check if user can build. Checks inheritance and subgroups.
 	 * 
-	 * @param userName
-	 *            Player's name
+	 * @param userName Player's name
 	 * @return true if the user can build
 	 */
 	public boolean canUserBuild(String userName) {
@@ -393,7 +389,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Returns the String prefix for the given group
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return empty string if found none.
 	 */
 	@Override
@@ -409,7 +405,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Return the suffix for the given group name
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return empty string if not found.
 	 */
 	@Override
@@ -426,7 +422,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Checks the specified group for the Info Build node. Does NOT check
 	 * inheritance
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return true if can build
 	 */
 	@Override
@@ -443,8 +439,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * It returns a string variable value, set in the INFO node of the group. It
 	 * will harvest inheritance for value.
 	 * 
-	 * @param groupName
-	 * @param variable
+	 * @param groupName group name
+	 * @param variable variable name
 	 * @return null if no group with that variable is found.
 	 */
 	@Override
@@ -465,8 +461,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * It returns a Integer variable value It will harvest inheritance for
 	 * value.
 	 * 
-	 * @param groupName
-	 * @param variable
+	 * @param groupName group name
+	 * @param variable variable name
 	 * @return -1 if none found or not parseable.
 	 */
 	@Override
@@ -487,8 +483,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Returns a boolean for given variable in INFO node. It will harvest
 	 * inheritance for value.
 	 * 
-	 * @param group
-	 * @param variable
+	 * @param group group name
+	 * @param variable variable name
 	 * @return false if not found/not parseable.
 	 */
 	@Override
@@ -509,8 +505,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Returns a double value for the given variable name in INFO node. It will
 	 * harvest inheritance for value.
 	 * 
-	 * @param group
-	 * @param variable
+	 * @param group group name
+	 * @param variable variable name
 	 * @return -1 if not found / not parseable.
 	 */
 	@Override
@@ -530,8 +526,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Returns the variable value of the user, in INFO node.
 	 * 
-	 * @param user
-	 * @param variable
+	 * @param user user name
+	 * @param variable variable name
 	 * @return empty string if not found
 	 */
 	@Override
@@ -547,8 +543,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Returns the variable value of the user, in INFO node.
 	 * 
-	 * @param user
-	 * @param variable
+	 * @param user user name
+	 * @param variable variable name
 	 * @return -1 if not found
 	 */
 	@Override
@@ -564,8 +560,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Returns the variable value of the user, in INFO node.
 	 * 
-	 * @param user
-	 * @param variable
+	 * @param user user name
+	 * @param variable variable name
 	 * @return boolean value
 	 */
 	@Override
@@ -581,8 +577,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Returns the variable value of the user, in INFO node.
 	 * 
-	 * @param user
-	 * @param variable
+	 * @param user user name
+	 * @param variable variable name
 	 * @return -1 if not found
 	 */
 	@Override
@@ -600,8 +596,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * will search for his Group variables. It will harvest the inheritance and
 	 * subgroups.
 	 * 
-	 * @param user
-	 * @param variable
+	 * @param user user name
+	 * @param variable variable name
 	 * @return empty string if not found
 	 */
 	@Override
@@ -640,8 +636,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * will search for his Group variables. It will harvest the inheritance and
 	 * subgroups.
 	 * 
-	 * @param user
-	 * @param variable
+	 * @param user user name
+	 * @param variable variable name
 	 * @return -1 if not found
 	 */
 	@Override
@@ -679,9 +675,9 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Returns the variable value of the user, in INFO node. If not found, it
 	 * will search for his Group variables. It will harvest the inheritance and
 	 * subgroups.
-	 * 
-	 * @param user
-	 * @param variable
+	 *
+	 * @param user user name
+	 * @param variable variable name
 	 * @return false if not found or not parseable to true.
 	 */
 	@Override
@@ -719,9 +715,9 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Returns the variable value of the user, in INFO node. If not found, it
 	 * will search for his Group variables. It will harvest the inheritance and
 	 * subgroups.
-	 * 
-	 * @param user
-	 * @param variable
+	 *
+	 * @param user user name
+	 * @param variable variable name
 	 * @return -1 if not found.
 	 */
 	@Override
@@ -757,9 +753,9 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 
 	/**
 	 * Does not include User's group permission
-	 * 
-	 * @param user
-	 * @param permission
+	 *
+	 * @param user username
+	 * @param permission permission
 	 * @return PermissionCheckResult
 	 */
 	public PermissionCheckResult checkUserOnlyPermission(User user, String permission) {
@@ -782,9 +778,9 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Returns the node responsible for that permission. Does not include User's
 	 * group permission.
-	 * 
-	 * @param group
-	 * @param permission
+	 *
+	 * @param group group
+	 * @param permission permission
 	 * @return the node if permission is found. if not found, return null
 	 */
 	public PermissionCheckResult checkGroupOnlyPermission(Group group, String permission) {
@@ -807,8 +803,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Check permissions, including it's group and inheritance.
 	 * 
-	 * @param user
-	 * @param permission
+	 * @param user user
+	 * @param permission permission
 	 * @return true if permission was found. false if not, or was negated.
 	 */
 	public boolean checkUserPermission(User user, String permission) {
@@ -825,8 +821,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Do what checkUserPermission did before. But now returning a
 	 * PermissionCheckResult.
 	 * 
-	 * @param user
-	 * @param targetPermission
+	 * @param user user
+	 * @param targetPermission permission
 	 * @return PermissionCheckResult
 	 */
 	public PermissionCheckResult checkFullUserPermission(User user, String targetPermission) {
@@ -841,9 +837,9 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Check user and groups with inheritance and Bukkit if bukkit = true return
 	 * a PermissionCheckResult.
 	 * 
-	 * @param user
-	 * @param targetPermission
-	 * @param checkBukkit
+	 * @param user user
+	 * @param targetPermission permission
+	 * @param checkBukkit true to check Bukkit
 	 * @return PermissionCheckResult
 	 */
 	public PermissionCheckResult checkFullGMPermission(User user, String targetPermission, Boolean checkBukkit) {
@@ -873,9 +869,9 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Check user and groups with inheritance and Bukkit if bukkit = true return
 	 * a PermissionCheckResult.
 	 * 
-	 * @param user
-	 * @param targetPermission
-	 * @param checkBukkit
+	 * @param user user
+	 * @param targetPermission permission
+	 * @param checkBukkit true to check Bukkit
 	 * @return PermissionCheckResult
 	 */
 	private PermissionCheckResult checkPermission(User user, String targetPermission, Boolean checkBukkit) {
@@ -1040,8 +1036,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * 
 	 * It does Breadth-first search
 	 * 
-	 * @param start
-	 * @param targetPermission
+	 * @param start the group to start the search
+	 * @param targetPermission target permission
 	 * @return PermissionCheckResult
 	 */
 	public PermissionCheckResult checkGroupPermissionWithInheritance(Group start, String targetPermission) {
@@ -1096,7 +1092,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * 
 	 * It does Breadth-first search. So closer groups will appear first in list.
 	 * 
-	 * @param start
+	 * @param start group to start the search
 	 * @return the group that passed on test. null if no group passed.
 	 */
 	public ArrayList<String> listAllGroupsInherited(Group start) {
@@ -1135,8 +1131,8 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Every '-' or '+' in the beginning is ignored. It will match only node
 	 * names.
 	 * 
-	 * @param userAccessLevel
-	 * @param fullPermissionName
+	 * @param userAccessLevel wildcard permission
+	 * @param fullPermissionName full permission node
 	 * @return PermissionCheckResult.Type
 	 */
 	public PermissionCheckResult.Type comparePermissionString(String userAccessLevel, String fullPermissionName) {
@@ -1186,7 +1182,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * 
 	 * Including subgroups.
 	 * 
-	 * @param userName
+	 * @param userName username
 	 * @return String[] of all group names.
 	 */
 	@Override

@@ -138,8 +138,8 @@ public class BukkitPermissions {
 	 * Push all permissions which are registered with GM for this player, on
 	 * this world to Bukkit and make it update for the child nodes.
 	 * 
-	 * @param player
-	 * @param world
+	 * @param player player
+	 * @param world world name
 	 */
 	public void updatePermissions(Player player, String world) {
 
@@ -267,7 +267,7 @@ public class BukkitPermissions {
 	 * Fetch all permissions which are registered with superperms.
 	 * {can include child nodes)
 	 * 
-	 * @param includeChildren
+	 * @param includeChildren true to include children
 	 * @return List of all permission nodes
 	 */
 	public List<String> getAllRegisteredPermissions(boolean includeChildren) {
@@ -296,7 +296,7 @@ public class BukkitPermissions {
 	 * Returns a map of ALL child permissions registered with bukkit
 	 * null is empty
 	 * 
-	 * @param node
+	 * @param node permission
 	 * @param playerPermArray current list of perms to check against for
 	 *            negations
 	 * @return Map of child permissions
@@ -334,7 +334,7 @@ public class BukkitPermissions {
 	 * Bukkit.
 	 * null is empty
 	 * 
-	 * @param node
+	 * @param node permission
 	 * @return Map of child permissions
 	 */
 	public Map<String, Boolean> getChildren(String node) {
@@ -350,8 +350,8 @@ public class BukkitPermissions {
 	/**
 	 * List all effective permissions for this player.
 	 * 
-	 * @param player
-	 * @return List<String> of permissions
+	 * @param player player
+	 * @return list of permissions
 	 */
 	public List<String> listPerms(Player player) {
 
@@ -386,7 +386,9 @@ public class BukkitPermissions {
 	}
 
 	/**
-	 * force Bukkit to update this Players permissions.
+	 * Force Bukkit to update this Players permissions.
+	 *
+	 * @param player player
 	 */
 	public void updatePlayer(Player player) {
 

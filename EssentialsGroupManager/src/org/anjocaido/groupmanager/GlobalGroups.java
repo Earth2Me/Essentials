@@ -79,14 +79,16 @@ public class GlobalGroups {
 	}
 
 	/**
-	 * @param haveGroupsChanged
-	 *            the haveGroupsChanged to set
+	 * @param haveGroupsChanged the haveGroupsChanged to set
 	 */
 	public void setGroupsChanged(boolean haveGroupsChanged) {
 
 		this.haveGroupsChanged = haveGroupsChanged;
 	}
 
+	/**
+	 * Loads data from YAML
+	 */
 	@SuppressWarnings("unchecked")
 	public void load() {
 
@@ -214,6 +216,8 @@ public class GlobalGroups {
 
 	/**
 	 * Write the globalgroups.yml file
+	 *
+	 * @param overwrite true to overwrite
 	 */
 
 	public void writeGroups(boolean overwrite) {
@@ -278,8 +282,6 @@ public class GlobalGroups {
 
 	/**
 	 * Backup the BlobalGroups file
-	 * 
-	 * @param w
 	 */
 	private void backupFile() {
 
@@ -294,7 +296,7 @@ public class GlobalGroups {
 	/**
 	 * Adds a group, or replaces an existing one.
 	 * 
-	 * @param groupToAdd
+	 * @param groupToAdd group to add
 	 */
 	public void addGroup(Group groupToAdd) {
 
@@ -313,7 +315,8 @@ public class GlobalGroups {
 	/**
 	 * Creates a new group if it doesn't already exist.
 	 * 
-	 * @param newGroup
+	 * @param newGroup new group
+	 * @return the newly created group
 	 */
 	public Group newGroup(Group newGroup) {
 
@@ -329,7 +332,8 @@ public class GlobalGroups {
 	/**
 	 * Delete a group if it exist.
 	 * 
-	 * @param groupName
+	 * @param groupName group name
+	 * @return whether the group existed
 	 */
 	public boolean removeGroup(String groupName) {
 
@@ -347,7 +351,7 @@ public class GlobalGroups {
 	/**
 	 * Returns true if the Global Group exists in the globalgroups.yml
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return true if the group exists
 	 */
 	public boolean hasGroup(String groupName) {
@@ -358,8 +362,8 @@ public class GlobalGroups {
 	/**
 	 * Returns true if the group has the correct permission node.
 	 * 
-	 * @param groupName
-	 * @param permissionNode
+	 * @param groupName group name
+	 * @param permissionNode permission node
 	 * @return true if node exists
 	 */
 	public boolean hasPermission(String groupName, String permissionNode) {
@@ -375,8 +379,8 @@ public class GlobalGroups {
 	 * Returns a PermissionCheckResult of the permission node for the group to
 	 * be tested against.
 	 * 
-	 * @param groupName
-	 * @param permissionNode
+	 * @param groupName group name
+	 * @param permissionNode permission node
 	 * @return PermissionCheckResult object
 	 */
 	public PermissionCheckResult checkPermission(String groupName, String permissionNode) {
@@ -403,7 +407,7 @@ public class GlobalGroups {
 	/**
 	 * Returns a List of all permission nodes for this group null if none
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return List of all group names
 	 */
 	public List<String> getGroupsPermissions(String groupName) {
@@ -432,6 +436,7 @@ public class GlobalGroups {
 	}
 
 	/**
+	 * Gets a collection of groups
 	 * 
 	 * @return a collection of the groups
 	 */
@@ -444,7 +449,7 @@ public class GlobalGroups {
 	/**
 	 * Returns the Global Group or null if it doesn't exist.
 	 * 
-	 * @param groupName
+	 * @param groupName group name
 	 * @return Group object
 	 */
 	public Group getGroup(String groupName) {
@@ -465,8 +470,8 @@ public class GlobalGroups {
 	}
 
 	/**
-    *
-    */
+     * Marks all groups as saved
+     */
 	public void removeGroupsChangedFlag() {
 
 		setGroupsChanged(false);

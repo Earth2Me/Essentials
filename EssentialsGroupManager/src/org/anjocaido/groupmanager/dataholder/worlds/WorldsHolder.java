@@ -51,7 +51,7 @@ public class WorldsHolder {
 
 	/**
 	 * 
-	 * @param plugin
+	 * @param plugin group manager plugin
 	 */
 	public WorldsHolder(GroupManager plugin) {
 
@@ -285,7 +285,7 @@ public class WorldsHolder {
 
 	/**
 	 * 
-	 * @param worldName
+	 * @param worldName world name
 	 */
 	public void reloadWorld(String worldName) {
 
@@ -305,7 +305,8 @@ public class WorldsHolder {
 	}
 
 	/**
-     *
+     * @param overwrite true to overwrite
+	 * @return true if changed
      */
 	public boolean saveChanges(boolean overwrite) {
 
@@ -408,7 +409,7 @@ public class WorldsHolder {
 	 * Mirrors return their parent world data.
 	 * If no mirroring data it returns the default world.
 	 * 
-	 * @param worldName
+	 * @param worldName world name
 	 * @return OverloadedWorldHolder
 	 */
 	public OverloadedWorldHolder getWorldData(String worldName) {
@@ -454,7 +455,7 @@ public class WorldsHolder {
 	 * Do a matching of playerName, if its found only one player, do
 	 * getWorldData(player)
 	 * 
-	 * @param playerName
+	 * @param playerName player name
 	 * @return null if matching returned no player, or more than one.
 	 */
 	public OverloadedWorldHolder getWorldDataByPlayerName(String playerName) {
@@ -470,7 +471,7 @@ public class WorldsHolder {
 	 * Retrieves the field player.getWorld().getName() and do
 	 * getWorld(worldName)
 	 * 
-	 * @param player
+	 * @param player player
 	 * @return OverloadedWorldHolder
 	 */
 	public OverloadedWorldHolder getWorldData(Player player) {
@@ -481,7 +482,7 @@ public class WorldsHolder {
 	/**
 	 * It does getWorld(worldName).getPermissionsHandler()
 	 * 
-	 * @param worldName
+	 * @param worldName world name
 	 * @return AnjoPermissionsHandler
 	 */
 	public AnjoPermissionsHandler getWorldPermissions(String worldName) {
@@ -492,7 +493,7 @@ public class WorldsHolder {
 	/**
 	 * Returns the PermissionsHandler for this player data
 	 * 
-	 * @param player
+	 * @param player player
 	 * @return AnjoPermissionsHandler
 	 */
 	public AnjoPermissionsHandler getWorldPermissions(Player player) {
@@ -504,7 +505,7 @@ public class WorldsHolder {
 	 * Id does getWorldDataByPlayerName(playerName).
 	 * If it doesnt return null, it will return result.getPermissionsHandler()
 	 * 
-	 * @param playerName
+	 * @param playerName player name
 	 * @return null if the player matching gone wrong.
 	 */
 	public AnjoPermissionsHandler getWorldPermissionsByPlayerName(String playerName) {
@@ -598,8 +599,8 @@ public class WorldsHolder {
 	/**
 	 * Copies the specified world data to another world
 	 * 
-	 * @param fromWorld
-	 * @param toWorld
+	 * @param fromWorld name of world to clone
+	 * @param toWorld name of clone
 	 * @return true if successfully copied.
 	 */
 	public boolean cloneWorld(String fromWorld, String toWorld) {
@@ -633,7 +634,7 @@ public class WorldsHolder {
 	 * Load a world from file.
 	 * If it already been loaded, summon reload method from dataHolder.
 	 * 
-	 * @param worldName
+	 * @param worldName world name
 	 */
 	public void loadWorld(String worldName) {
 
@@ -644,7 +645,8 @@ public class WorldsHolder {
 	 * Load a world from file.
 	 * If it already been loaded, summon reload method from dataHolder.
 	 * 
-	 * @param worldName
+	 * @param worldName world name
+	 * @param isMirror true if permissions are mirrored
 	 */
 	public void loadWorld(String worldName, Boolean isMirror) {
 
@@ -706,7 +708,7 @@ public class WorldsHolder {
 	 * 
 	 * It will return true if world is a mirror.
 	 * 
-	 * @param worldName
+	 * @param worldName world name
 	 * @return true if world is loaded or mirrored. false if not listed
 	 */
 	public boolean isInList(String worldName) {
@@ -720,7 +722,7 @@ public class WorldsHolder {
 	/**
 	 * Verify if world has it's own file permissions.
 	 * 
-	 * @param worldName
+	 * @param worldName world name
 	 * @return true if it has its own holder. false if not.
 	 */
 	public boolean hasOwnData(String worldName) {
@@ -743,7 +745,7 @@ public class WorldsHolder {
 	 * Returns all physically loaded worlds which have at least one of their own
 	 * data sets for users or groups which isn't an identical mirror.
 	 * 
-	 * @return ArrayList<OverloadedWorldHolder> of all loaded worlds
+	 * @return list of all loaded worlds
 	 */
 	public ArrayList<OverloadedWorldHolder> allWorldsDataList() {
 

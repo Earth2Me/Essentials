@@ -52,7 +52,7 @@ public abstract class Variables implements Cloneable {
 	/**
 	 * Returns the object inside the var
 	 * 
-	 * @param name
+	 * @param name variable name
 	 * @return a Object if exists. null if doesn't exists
 	 */
 	public Object getVarObject(String name) {
@@ -78,7 +78,7 @@ public abstract class Variables implements Cloneable {
 
 	/**
 	 * 
-	 * @param name
+	 * @param name variable name
 	 * @return false if null. or a Boolean.parseBoolean of the string
 	 */
 	public Boolean getVarBoolean(String name) {
@@ -93,7 +93,7 @@ public abstract class Variables implements Cloneable {
 
 	/**
 	 * 
-	 * @param name
+	 * @param name variable name
 	 * @return -1 if null. or a parseInt of the string
 	 */
 	public Integer getVarInteger(String name) {
@@ -108,7 +108,7 @@ public abstract class Variables implements Cloneable {
 
 	/**
 	 * 
-	 * @param name
+	 * @param name variable name
 	 * @return -1 if null. or a parseDouble of the string
 	 */
 	public Double getVarDouble(String name) {
@@ -156,7 +156,7 @@ public abstract class Variables implements Cloneable {
 	/**
 	 * Remove a var from the list
 	 * 
-	 * @param name
+	 * @param name variable name
 	 */
 	public void removeVar(String name) {
 

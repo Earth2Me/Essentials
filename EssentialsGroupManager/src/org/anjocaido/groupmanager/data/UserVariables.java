@@ -30,7 +30,8 @@ public class UserVariables extends Variables {
 
 	/**
 	 * A clone of all vars here.
-	 * 
+	 *
+	 * @param newOwner new owner
 	 * @return UserVariables clone
 	 */
 	protected UserVariables clone(User newOwner) {

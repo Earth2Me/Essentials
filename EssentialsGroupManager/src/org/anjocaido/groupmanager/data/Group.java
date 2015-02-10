@@ -31,8 +31,9 @@ public class Group extends DataUnit implements Cloneable {
 
 	/**
 	 * Constructor for individual World Groups.
-	 * 
-	 * @param name
+	 *
+	 * @param source world data holder
+	 * @param name group name
 	 */
 	public Group(WorldDataHolder source, String name) {
 
@@ -42,7 +43,7 @@ public class Group extends DataUnit implements Cloneable {
 	/**
 	 * Constructor for Global Groups.
 	 * 
-	 * @param name
+	 * @param name group name
 	 */
 	public Group(String name) {
 
@@ -97,7 +98,7 @@ public class Group extends DataUnit implements Cloneable {
 	/**
 	 * Use this to deliver a group from a different dataSource to another
 	 * 
-	 * @param dataSource
+	 * @param dataSource world data holder
 	 * @return Null or Clone
 	 */
 	public Group clone(WorldDataHolder dataSource) {
@@ -180,7 +181,7 @@ public class Group extends DataUnit implements Cloneable {
 
 	/**
 	 * 
-	 * @param varList
+	 * @param varList variable list
 	 */
 	public void setVariables(Map<String, Object> varList) {
 
