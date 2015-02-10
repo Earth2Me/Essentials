@@ -3,7 +3,7 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.ess3</groupId>
+	<groupId>com.earth2me.essentials</groupId>
 	<artifactId>EssentialsParent</artifactId>
 	<version>2.x-SNAPSHOT</version>
 
@@ -306,7 +306,7 @@
 	</build>
 
 	<properties>
-		<build.number>TeamCity</build.number>
+		<build.number>Travis</build.number>
 		<GMVer>GMBuildVer</GMVer>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
