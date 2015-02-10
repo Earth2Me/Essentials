@@ -45,6 +45,7 @@
 /out
 .idea/
 *.iml
+atlassian-ide-plugin.xml
 target/
 dependency-reduced-pom.xml
 /Essentials/config.yml
