@@ -8,11 +8,11 @@ install: true
 notifications:
   irc: 
     channels: 
-      - "irc.esper.net#lain"
+      - "irc.spi.gt#essentials-dev"
     on_success: change
     on_failure: always
   email:
     recipients:
-      - "khobbits@ess3.net"
+      - "paul+essentials@earth2me.com"
     on_success: change
     on_failure: always
