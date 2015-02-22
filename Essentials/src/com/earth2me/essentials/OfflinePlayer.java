@@ -251,13 +251,31 @@ public class OfflinePlayer implements Player
 	}
 
 	@Override
+	public List<Block> getLineOfSight(Set<Material> set, int i)
+	{
+		throw new UnsupportedOperationException(tl("notSupportedYet"));
+	}
+
+	@Override
 	public Block getTargetBlock(HashSet<Byte> hs, int i)
 	{
 		throw new UnsupportedOperationException(tl("notSupportedYet"));
 	}
 
 	@Override
+	public Block getTargetBlock(Set<Material> set, int i)
+	{
+		throw new UnsupportedOperationException(tl("notSupportedYet"));
+	}
+
+	@Override
 	public List<Block> getLastTwoTargetBlocks(HashSet<Byte> hs, int i)
+	{
+		throw new UnsupportedOperationException(tl("notSupportedYet"));
+	}
+
+	@Override
+	public List<Block> getLastTwoTargetBlocks(Set<Material> set, int i)
 	{
 		throw new UnsupportedOperationException(tl("notSupportedYet"));
 	}
@@ -1489,6 +1507,7 @@ public class OfflinePlayer implements Player
 	}
 
 	@Override
+	@Deprecated
 	public void setBanned(boolean banned)
 	{
 		if (base.getName() == null && getName() != null)

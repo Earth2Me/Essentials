@@ -3,8 +3,11 @@ package com.earth2me.essentials.commands;
 import com.earth2me.essentials.CommandSource;
 import static com.earth2me.essentials.I18n.tl;
 import com.earth2me.essentials.User;
+import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.entity.LightningStrike;
+
+import java.util.Set;
 
 
 public class Commandlightning extends EssentialsLoopCommand
@@ -25,7 +28,7 @@ public class Commandlightning extends EssentialsLoopCommand
 			user = ess.getUser(sender.getPlayer());
 			if ((args.length < 1 || user != null && !user.isAuthorized("essentials.lightning.others")))
 			{
-				user.getWorld().strikeLightning(user.getBase().getTargetBlock(null, 600).getLocation());
+				user.getWorld().strikeLightning(user.getBase().getTargetBlock((Set<Material>)null, 600).getLocation());
 				return;
 			}
 		}

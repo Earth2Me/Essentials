@@ -7,6 +7,8 @@ import org.bukkit.Server;
 import org.bukkit.block.Block;
 import org.bukkit.event.block.BlockBreakEvent;
 
+import java.util.Set;
+
 
 public class Commandbreak extends EssentialsCommand
 {
@@ -19,7 +21,7 @@ public class Commandbreak extends EssentialsCommand
 	@Override
 	public void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception
 	{
-		final Block block = user.getBase().getTargetBlock(null, 20);
+		final Block block = user.getBase().getTargetBlock((Set<Material>)null, 20);
 		if (block == null)
 		{
 			throw new NoChargeException();
